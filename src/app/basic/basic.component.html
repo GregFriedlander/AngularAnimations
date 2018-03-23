@@ -1,0 +1,33 @@
+<h1 class="homeTop">Animation Basics</h1>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-4">
+            <div class="btn-group-vertical btn-block" style="margin-top:1rem;">
+                <a (click)="setState('square')" class="btn btn-primary active">Return to Original</a>
+                <a (click)="setState('basic')" class="btn btn-primary">Animation</a>
+                <!-- <a (click)="setState('triangle')" class="btn btn-primary">Triangle</a> -->
+                <a (click)="setState('delaying')" class="btn btn-primary">Animation with Delay</a>
+                <a (click)="setState('easing')" class="btn btn-primary">Animation with Ease</a>
+                <a (click)="setState('stepped')" class="btn btn-primary">Stepped Animation</a>
+                <a (click)="setState('parallel')" class="btn btn-primary">Parallel Animation</a>
+                <!-- <form (submit)="colorAnimation()" #colorForm="ngForm">
+                  Animate To: <input type="text" name="color" [(ngModel)]="newColor.end" #end="ngModel">
+                  <input type="submit" value="Animate">
+                </form> -->
+            </div>
+          </div>
+          <div class="container">
+            <div class="span8">
+              <anim-sub [currentState]="switchState"></anim-sub>
+            </div>
+          </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-4">
+          <div class="btn-group-vertical btn-block">
+            <a (click)="setState('square')" class="btn btn-secondary">Square</a>
+            <a (click)="setState('triangle')" class="btn btn-secondary">Triangle</a>
+          </div>
+        </div>
+      </div> -->
+  </div>

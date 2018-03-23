@@ -1,0 +1,28 @@
+<h1 class="homeTop">Create A Custom Animaiton</h1>
+<div class="row">
+  <div class="col-4">
+    <h3>Choose a Shape</h3>
+      <!-- <select name="shape" id="shapeSelect" (click)="changeShape(value)">
+        <option value="square">Square</option>
+        <option value="circle">Circle</option>
+        <option value="triangle">Triangle</option>
+      </select> -->
+      <button (click)="setState('square')">Square</button>
+      <button (click)="setState('circle')">Circle</button>
+      <button (click)="setState('triangle')">Triangle</button>
+    <h3>Choose a Color</h3>
+      <!-- <button (click)="changeColor('yellow')">Yellow</button> -->
+      <button (click)="setState('yellow')">Yellow</button>
+      <button (click)="setState('blue')">Blue</button>
+      <button (click)="setState('green')">Green</button>
+      <button (click)="setState('black')">Black</button>
+    <h3>ANIMATE</h3>
+      <!-- <button (click)="setState('colorSwap')">Animate</button> -->
+    <h3>Choose Your Rotation</h3>
+  </div>
+  <div class="col-8">
+    <div [@changeState]="currentState" *ngIf="currentShape == 'square'" class="square" [ngStyle]="{'background-color': currentColor}"></div>
+    <div [@changeState]="currentState" *ngIf="currentShape == 'circle'" class="circle" [ngStyle]="{'background-color': currentColor}"></div>
+    <div [@changeState]="currentState" *ngIf="currentShape == 'triangle'" class="triangle" [ngStyle]="{'border-bottom-color': currentColor}"></div>
+  </div>
+</div>
